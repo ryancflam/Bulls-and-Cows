@@ -67,7 +67,15 @@ def game():
                               bulls+=1
                             else:
                               cows+=1
-                    print(f"\nResult: {bulls} bull(s) and {cows} cow(s).")
+                    print("")
+                    if bulls==1 and(cows==2 or cows==3 or cows==0):
+                        print(f"Result: {bulls} bull and {cows} cows.")
+                    elif cows==1 and(bulls==2 or bulls==3 or bulls==0):
+                        print(f"Result: {bulls} bulls and {cows} cow.")
+                    elif cows==1 and bulls==1:
+                        print(f"Result: {bulls} bull and {cows} cow.")
+                    elif cows!=1 and bulls!=1:
+                        print(f"Result: {bulls} bulls and {cows} cows.")
                     cows=0
                     bulls=0
             except:
