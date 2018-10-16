@@ -28,14 +28,20 @@ def game():
         if len(guess)!=4:
             print("\n[ERROR] You must input exactly four numbers.")
         if guess=="exit":
-            seconds_in_hour=3600
             seconds_in_minute=60
             seconds=int(time.time()-startTime)
-            hours=int(seconds//seconds_in_hour)
-            seconds=int(seconds-(hours*seconds_in_hour))
             minutes=int(seconds//seconds_in_minute)
             seconds=int(seconds-(minutes*seconds_in_minute))
-            print(f"\n. . .\n\nThe number was {number}.\n\nTotal attempts: {count-1}\n\nTime spent: {hours} hour(s), {minutes} minute(s) and {seconds} second(s).\n\n. . .\n\nThank you for playing Bulls and Cows.\n\nExiting in 3 seconds...\n\n.")
+            print(f"\n. . .\n\nThe number was {number}.\n\nTotal attempts: {count-1}\n")
+            if minutes==1 and seconds==1:
+                print(f"Time spent: {minutes} minute and {seconds} second.\n\n. . .")
+            if minutes!=1 and seconds!=1:
+                print(f"Time spent: {minutes} minutes and {seconds} seconds.\n\n. . .")
+            if minutes!=1 and seconds==1:
+                print(f"Time spent: {minutes} minutes and {seconds} second.\n\n. . .")
+            if minutes==1 and seconds!=1:
+                print(f"Time spent: {minutes} minute and {seconds} seconds.\n\n. . .")
+            print("\nThank you for playing Bulls and Cows.\n\nExiting in 3 seconds...\n\n.")
             time.sleep(1)
             print(".")
             time.sleep(1)
@@ -68,9 +74,9 @@ def game():
                             else:
                               cows+=1
                     print("")
-                    if bulls==1 and(cows==2 or cows==3 or cows==0):
+                    if bulls==1 and cows!=1:
                         print(f"Result: {bulls} bull and {cows} cows.")
-                    elif cows==1 and(bulls==2 or bulls==3 or bulls==0):
+                    elif cows==1 and bulls!=1:
                         print(f"Result: {bulls} bulls and {cows} cow.")
                     elif cows==1 and bulls==1:
                         print(f"Result: {bulls} bull and {cows} cow.")
@@ -82,14 +88,19 @@ def game():
                 print("\n[ERROR] Invalid characters. Please try again.")
         count+=1
         guess=str(input("\nGuess a four-digit number (Enter 'exit' to exit, or 'help' for help): "))
-    seconds_in_hour=3600
     seconds_in_minute=60
     seconds=int(time.time()-startTime)
-    hours=int(seconds//seconds_in_hour)
-    seconds=int(seconds-(hours*seconds_in_hour))
     minutes=int(seconds//seconds_in_minute)
     seconds=int(seconds-(minutes*seconds_in_minute))
-    print(f"\nResult: 4 bulls!\n\n. . .\n\nCongratulations, you have guessed the number.\n\nTotal attempts: {count}\n\nTime spent: {hours} hour(s), {minutes} minute(s) and {seconds} second(s).\n\n. . .")
+    print(f"\nResult: 4 bulls!\n\n. . .\n\nCongratulations, you have guessed the number.\n\nTotal attempts: {count}\n")
+    if minutes==1 and seconds==1:
+        print(f"Time spent: {minutes} minute and {seconds} second.\n\n. . .")
+    if minutes!=1 and seconds!=1:
+        print(f"Time spent: {minutes} minutes and {seconds} seconds.\n\n. . .")
+    if minutes!=1 and seconds==1:
+        print(f"Time spent: {minutes} minutes and {seconds} second.\n\n. . .")
+    if minutes==1 and seconds!=1:
+        print(f"Time spent: {minutes} minute and {seconds} seconds.\n\n. . .")
     playagain=int(input("\nWould you like to play again?\n\nEnter 1 to play again, or any other number to quit.\n\nYour choice: "))
     while playagain==1:
         print("\n. . .")
