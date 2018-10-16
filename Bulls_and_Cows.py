@@ -1,3 +1,4 @@
+# Copyright (C) 3CP Studios.
 print("\nStarting programme...\n\n. . .")
 import random,time
 time.sleep(1)
