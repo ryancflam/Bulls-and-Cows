@@ -3,8 +3,10 @@ print("\nStarting programme...\n\n. . .")
 import random,time
 time.sleep(1)
 print("\nWelcome to Bulls and Cows.")
-def randomnumber():
-    global a,b,c,d
+def game():
+    startTime=time.time()
+    cows=0
+    bulls=0
     a=random.randint(0,9)
     b=random.randint(0,9)
     while b==a:
@@ -16,12 +18,6 @@ def randomnumber():
     while d==a or d==b or d==c:
         d=random.randint(0,9)
     number=str("{}{}{}{}".format(a,b,c,d))
-    return number
-def game():
-    startTime=time.time()
-    cows=0
-    bulls=0
-    number=str(randomnumber())
     count=1
     guess=str(input("\nGuess a four-digit number (Input 'exit' to exit, or 'help' for help): "))
     while guess!=number:
