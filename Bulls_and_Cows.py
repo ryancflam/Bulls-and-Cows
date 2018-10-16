@@ -76,11 +76,11 @@ def game():
                     print("")
                     if bulls==1 and cows!=1:
                         print(f"Result: {bulls} bull and {cows} cows.")
-                    elif cows==1 and bulls!=1:
+                    if cows==1 and bulls!=1:
                         print(f"Result: {bulls} bulls and {cows} cow.")
-                    elif cows==1 and bulls==1:
+                    if cows==1 and bulls==1:
                         print(f"Result: {bulls} bull and {cows} cow.")
-                    elif cows!=1 and bulls!=1:
+                    if cows!=1 and bulls!=1:
                         print(f"Result: {bulls} bulls and {cows} cows.")
                     cows=0
                     bulls=0
