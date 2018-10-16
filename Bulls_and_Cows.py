@@ -17,7 +17,7 @@ def game():
     d=random.randint(0,9)
     while d==a or d==b or d==c:
         d=random.randint(0,9)
-    number=str("{}{}{}{}".format(a,b,c,d))
+    number=str(f"{a}{b}{c}{d}")
     count=1
     guess=str(input("\nGuess a four-digit number (Input 'exit' to exit, or 'help' for help): "))
     while guess!=number:
