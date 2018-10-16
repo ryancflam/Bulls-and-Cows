@@ -1,5 +1,5 @@
 # Bulls and Cows
-Bulls and Cows - the classic pen-and-paper logic game recreated in Python.
+Bulls and Cows - the classic paper-and-pencil logic game recreated in Python.
 
 Want to improve your critical thinking skills? Play this game!
 
