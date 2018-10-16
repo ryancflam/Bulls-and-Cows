@@ -11,7 +11,9 @@ Example of an invalid number: 1244 (The number 4 has been used twice when it can
 Read more about Bulls and Cows here: https://en.wikipedia.org/wiki/Bulls_and_Cows
 
 ## Gameplay
-In the game, you are asked to enter a four-digit number. This is then compared to the randomly-generated four-digit number. Each individual digit entered by you is compared to each digit within the randomly-generated number. If a digit is in the randomly-generated number and is in the same position in the randomly-generated number as it was in your number, you have found a bull. If the digit is in the randomly-generated number but is in a different position, then you have found a cow. The goal is to obviously find all four bulls.
+In the game, you are asked to enter a four-digit number. This is then compared to the randomly-generated four-digit number. Each individual digit entered by you is compared to each digit within the randomly-generated number. If a digit is in the randomly-generated number and is in the same position in the randomly-generated number as it was in your number, you have found a bull. If the digit is in the randomly-generated number but is in a different position, then you have found a cow.
+
+The objective of the game is to obviously find all four bulls in as little attempts as possible.
 
 **Example**:
 
