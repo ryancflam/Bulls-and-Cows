@@ -23,7 +23,7 @@ def game():
     while guess!=number:
         if len(guess)!=4:
             print("\n[ERROR] You must input exactly four numbers.")
-        if guess=="exit" or guess=="Exit" or guess=="EXIT":
+        if guess=="exit":
             seconds_in_minute=60
             seconds=int(time.time()-startTime)
             minutes=int(seconds//seconds_in_minute)
@@ -45,7 +45,7 @@ def game():
             time.sleep(1)
             print("\nStopping programme...\n")
             exit()
-        if guess=="help" or guess=="Help" or guess=="HELP":
+        if guess=="help":
             print("\n. . .\n\n== Bulls and Cows ==\n\nBulls and Cows is a number guessing game where you try to guess a number that has been\nrandomly generated.\n\nThe randomly generated number contains exactly four digits between 0 and 9\nwith no repeats.\n\nExample of a valid guess: 1234\nExample of an invalid guess: 1444 (The number 4 has been used three times when you\ncan only use it once.)\n\nIn the game, you are asked to enter a four-digit number which is then compared to the randomly\n-generated four-digit number. Each individual digit entered by you is compared to each digit\nwithin the randomly-generated number. If a digit is in the randomly-generated number and is in\nthe same position in the randomly-generated number as it was in your number, then you have\nfound a bull. If the digit is in the randomly-generated number but is in a different position,\nthen you have found a cow.\n\nYour goal is to find all four bulls in the shortest amount of time and using as little\nattempts as possible.\n\nExample:\nRandomly-generated number: 1234\nYour guess: 1324\nResult: 2 bulls and 2 cows. (Bulls: 1 and 4, cows: 2 and 3.)\n\n. . .")
             try:
                 goback=input("\nEnter a number to go back: ")
