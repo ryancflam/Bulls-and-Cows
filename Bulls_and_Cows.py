@@ -62,8 +62,8 @@ def game():
                 else:
                     for xx in guess:
                         for yy in number:
-                          if(xx==yy):
-                            if(guess.index(xx)==number.index(yy)):
+                          if xx==yy:
+                            if guess.index(xx)==number.index(yy):
                               bulls+=1
                             else:
                               cows+=1
