@@ -28,12 +28,9 @@ def game():
         if len(guess)!=4:
             print("\n[ERROR] You must input exactly four numbers.")
         if guess=="exit":
-            seconds_in_day=86400
             seconds_in_hour=3600
             seconds_in_minute=60
             seconds=int(time.time()-startTime)
-            days=int(seconds//seconds_in_day)
-            seconds=int(seconds-(days*seconds_in_day))
             hours=int(seconds//seconds_in_hour)
             seconds=int(seconds-(hours*seconds_in_hour))
             minutes=int(seconds//seconds_in_minute)
@@ -77,12 +74,9 @@ def game():
                 print("\n[ERROR] Invalid characters. Please try again.")
         count+=1
         guess=str(input("\nGuess a four-digit number (Enter 'exit' to exit, or 'help' for help): "))
-    seconds_in_day=86400
     seconds_in_hour=3600
     seconds_in_minute=60
     seconds=int(time.time()-startTime)
-    days=int(seconds//seconds_in_day)
-    seconds=int(seconds-(days*seconds_in_day))
     hours=int(seconds//seconds_in_hour)
     seconds=int(seconds-(hours*seconds_in_hour))
     minutes=int(seconds//seconds_in_minute)
