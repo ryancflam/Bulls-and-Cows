@@ -18,6 +18,7 @@ def randomnumber():
     number=str("{}{}{}{}".format(a,b,c,d))
     return number
 def game():
+    startTime=time.time()
     cows=0
     bulls=0
     number=str(randomnumber())
@@ -27,7 +28,17 @@ def game():
         if len(guess)!=4:
             print("\n[ERROR] You must input exactly four numbers.")
         if guess=="exit":
-            print(f"\nThe number was {number}.\n\nTotal attempts: {count-1}\n\n. . .\n\nThank you for playing Bulls and Cows.\n\nExiting in 3 seconds...\n\n.")
+            seconds_in_day=86400
+            seconds_in_hour=3600
+            seconds_in_minute=60
+            seconds=int(time.time()-startTime)
+            days=int(seconds//seconds_in_day)
+            seconds=int(seconds-(days*seconds_in_day))
+            hours=int(seconds//seconds_in_hour)
+            seconds=int(seconds-(hours*seconds_in_hour))
+            minutes=int(seconds//seconds_in_minute)
+            seconds=int(seconds-(minutes*seconds_in_minute))
+            print(f"\nThe number was {number}.\n\nTotal attempts: {count-1}\n\nTime spent: {hours} hour(s), {minutes} minute(s) and {seconds} second(s).\n\n. . .\n\nThank you for playing Bulls and Cows.\n\nExiting in 3 seconds...\n\n.")
             time.sleep(1)
             print(".")
             time.sleep(1)
@@ -66,7 +77,18 @@ def game():
                 print("\n[ERROR] Invalid characters. Please try again.")
         count+=1
         guess=str(input("\nGuess a four-digit number (Enter 'exit' to exit, or 'help' for help): "))
-    print(f"\nResult: 4 bulls!\n\n. . .\n\nCongratulations, you have guessed the number. (Attempts: {count})")
+    seconds_in_day=86400
+    seconds_in_hour=3600
+    seconds_in_minute=60
+    seconds=int(time.time()-startTime)
+    days=int(seconds//seconds_in_day)
+    seconds=int(seconds-(days*seconds_in_day))
+    hours=int(seconds//seconds_in_hour)
+    seconds=int(seconds-(hours*seconds_in_hour))
+    minutes=int(seconds//seconds_in_minute)
+    seconds=int(seconds-(minutes*seconds_in_minute))
+    print(f"\nResult: 4 bulls!\n\n. . .\n\nCongratulations, you have guessed the number.\n\nTotal attempts: {count}")
+    print(f"\nTime spent: {hours} hour(s), {minutes} minute(s) and {seconds} second(s).")
     playagain=int(input("\nWould you like to play again?\n\nEnter 1 to play again, or any other number to quit.\n\nYour choice: "))
     while playagain==1:
         game()
