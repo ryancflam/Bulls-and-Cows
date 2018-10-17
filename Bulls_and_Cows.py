@@ -99,7 +99,8 @@ def game():
         print(f"Time spent: {minutes} minute and {seconds} seconds.\n\n. . .")
     playagain=int(input("\nWould you like to play again?\n\nEnter 1 to play again, or any other number to quit.\n\nYour choice: "))
     while playagain==1:
-        print("\n. . .")
+        print("\n. . .\n\nRestarting...\n\n. . .")
+        time.sleep(1)
         game()
     print("\n. . .\n\nThank you for playing Bulls and Cows.\n\nExiting in 3 seconds...\n\n.")
     time.sleep(1)
