@@ -4,7 +4,7 @@ import random,time
 time.sleep(1)
 print("\nWelcome to Bulls and Cows.")
 def game():
-    startTime=time.time()
+    start=time.time()
     cows=0
     bulls=0
     a=random.randint(0,9)
@@ -25,7 +25,7 @@ def game():
             print("\n[ERROR] You must input exactly four numbers.")
         if guess=="exit":
             seconds_in_minute=60
-            seconds=int(time.time()-startTime)
+            seconds=int(time.time()-start)
             minutes=int(seconds//seconds_in_minute)
             seconds=int(seconds-(minutes*seconds_in_minute))
             print(f"\n. . .\n\nThe number was {number}.\n\nTotal attempts: {count-1}\n")
@@ -85,7 +85,7 @@ def game():
         count+=1
         guess=str(input("\nGuess a four-digit number (Enter 'exit' to exit, or 'help' for help): "))
     seconds_in_minute=60
-    seconds=int(time.time()-startTime)
+    seconds=int(time.time()-start)
     minutes=int(seconds//seconds_in_minute)
     seconds=int(seconds-(minutes*seconds_in_minute))
     print(f"\nResult: 4 bulls!\n\n. . .\n\nCongratulations, you have guessed the number.\n\nTotal attempts: {count}\n")
