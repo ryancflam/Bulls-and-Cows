@@ -38,9 +38,9 @@ game.anticheat = False
 
 Using ```get_number()``` without disabling the anti-cheat will raise an exception.
 
-**Functions**:
+**guess(value)**:
 
-```guess(value)``` - Gets and verifies a user's guess. Requires the user to parse a ```value```, which must be a four-digit number with no repeated digits such as 1234. 
+Gets and verifies a user's guess. Requires the user to parse a ```value```, which must either be a four-digit number with no repeated digits such as 1234, or the following exit commands which are for forcibly stopping the game: 'exit', 'stop', 'halt', 'quit'. (case-insensitive)
 
 Function returns two values in order: number of bulls (integer), number of cows (integer). Sample usage:
 
@@ -51,7 +51,9 @@ print("Bulls:",bulls)
 print("Cows:",cows)
 ```
 
-```get_time()``` - Gets the total time spent by the player and converts it to minutes and seconds.
+**get_time()**:
+
+Gets the total time spent by the player and converts it to minutes and seconds.
 
 Function returns two values in order: minutes (integer), seconds (integer; is reset to 0 every 60 seconds). Sample usage:
 
@@ -60,7 +62,7 @@ mins, secs = game.get_time()
 print(f"Total time spent: {mins} min & {secs} sec.")
 ```
 
-**Other getters**:
+**Other Getters**:
 
 ```get_attempts()``` - Returns the total number of attempts used; integer value.
 
