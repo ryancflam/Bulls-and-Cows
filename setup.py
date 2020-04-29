@@ -4,7 +4,7 @@ with open("README.md","r")as f:
     long_description = f.read()
 setup(
     name = "bullsandcows",
-    version = "1.2",
+    version = "1.3",
     description = "Bulls and Cows in Python.",
     py_modules = ["bullsandcows"],
     package_dir = {"":"src"},
